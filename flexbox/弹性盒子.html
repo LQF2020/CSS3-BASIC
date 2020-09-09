@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>弹性盒子</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .wholewrap{
+            width: 960px;
+            margin: 5px auto;
+            border: 1px solid black;
+        }
+
+        .wholewrap .f-header{
+            color: greenyellow;
+            height: 30px;
+            line-height: 30px;
+            font-size: 30px;
+            background-color: red;
+            opacity: 0.5;
+        }
+        .wholewrap .f-body{
+            background-color: cadetblue;
+            display: flex;
+        }
+        .wholewrap .f-body div{
+            height: 100px;
+            border: 1px solid blue;
+            width: 100px;
+            background-color: #e5eecc;
+            line-height: 100px;
+            text-align: center;
+        }
+        .row{
+            flex-direction: row;
+        }
+        .row-reverse{
+            flex-direction: row-reverse;
+        }
+        .column{
+            flex-direction: column;
+        }
+
+        .column-reverse{
+            flex-direction: column-reverse;
+        }
+        .nowrap{
+            flex-wrap: nowrap;
+        }
+        .wrap{
+            flex-wrap: wrap;
+        }
+        .wrap-reverse{
+            flex-wrap: wrap-reverse;
+        }
+        .flex-start{
+            justify-content: flex-start;
+        }
+         .flex-end{
+            justify-content: flex-end;
+        }
+        .center{
+            justify-content: center;
+        }
+        .space-between{
+            justify-content: space-between;
+        }
+        .space-around{
+            justify-content: space-around;
+        }
+
+        .align-items-flex-start{
+            align-items: flex-start;
+        }
+         .align-items-flex-end{
+           align-items: flex-end;
+        }
+         .align-items-center{
+           align-items: center;
+        }
+         .align-items-baseline{
+           align-items: baseline;
+        }
+        .align-items-stretch{
+            align-items: stretch;
+        }
+
+         .align-content-flex-start{
+            align-content: flex-start;
+        }
+         .align-content-flex-end{
+           align-content: flex-end;
+        }
+         .align-content-center{
+           align-content: center;
+        }
+         .align-content-space-between{
+           align-content: space-between;
+        }
+        .align-content-space-around{
+            align-content: space-around;
+        }
+    </style>
+</head>
+<body>
+
+<!--设置子元素主轴方向 开始-->
+<h3>1.设置弹性盒子（父元素）的子元素主轴方向</h3>
+<hr>
+<div class="wholewrap">
+    <div class="f-header ">设置弹性盒子伸缩主轴的方向(默认：flex-direction: row)</div>
+    <div class="f-body row">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </div>
+</div>
+
+<div class="wholewrap">
+    <div class="f-header">设置弹性盒子伸缩主轴的方向(flex-direction: row-reverse)</div>
+    <div class="f-body row-reverse">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </div>
+</div>
+
+<div class="wholewrap">
+    <div class="f-header">设置弹性盒子伸缩主轴的方向(flex-direction: column)</div>
+    <div class="f-body column">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </div>
+</div>
+
+<div class="wholewrap">
+    <div class="f-header">设置弹性盒子伸缩主轴的方向(flex-direction: column-reverse)</div>
+    <div class="f-body column-reverse">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </div>
+</div>
+<!--设置子元素主轴方向 结束-->
+
+
+<!--设置子元素是否换行 开始-->
+<h3>2.设置弹性盒子（父元素）的子元素换行属性</h3>
+<hr>
+<div class="wholewrap">
+    <div class="f-header">设置弹性盒子伸缩换行(默认不换行，宽度自适应：flex-wrap: nowrap)</div>
+    <div class="f-body nowrap ">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+        <div>13</div>
+        <div>14</div>
+        <div>15</div>
+    </div>
+</div>
+
+<div class="wholewrap">
+    <div class="f-header">设置弹性盒子伸缩换行(flex-wrap: wrap)</div>
+    <div class="f-body wrap ">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+        <div>13</div>
+        <div>14</div>
+        <div>15</div>
+    </div>
+</div>
+
+<div class="wholewrap">
+    <div class="f-header">设置弹性盒子伸缩换行(flex-wrap: wrap-reverse)</div>
+    <div class="f-body wrap-reverse ">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+        <div>13</div>
+        <div>14</div>
+        <div>15</div>
+    </div>
+</div>
+<!--设置子元素是否换行 结束-->
+
+<!--设置主轴子元素排版对齐方式 开始-->
+<h3>3.设置弹性盒子（父元素）的主轴子元素排版对齐方式</h3>
+<hr>
+<div class="wholewrap">
+    <div class="f-header">设置弹性盒子主轴子元素排版对齐(默认，左对齐：justify-content: flex-start)</div>
+    <div class="f-body flex-start">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </div>
+</div>
+
+<div class="wholewrap">
+    <div class="f-header">主轴子元素排版对齐(右对齐：justify-content: flex-end)</div>
+    <div class="f-body flex-end">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </div>
+</div>
+
+<div class="wholewrap">
+    <div class="f-header">主轴子元素排版对齐(居中：justify-content: center)</div>
+    <div class="f-body center">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </div>
+</div>
+
+<div class="wholewrap">
+    <div class="f-header">主轴子元素排版对齐(两端对齐，间隔相等：justify-content: space-between)</div>
+    <div class="f-body space-between">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </div>
+</div>
+
+<div class="wholewrap">
+    <div class="f-header">主轴子元素排版对齐(两侧间隔相等：justify-content: space-around)</div>
+    <div class="f-body space-around">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </div>
+</div>
+<!--设置主轴子元素排版对齐方式 结束-->
+
+<!--设置侧轴子元素排版对齐方式 开始-->
+<h3>4.设置弹性盒子（父元素）的侧轴子元素排版对齐方式</h3>
+<hr>
+<div class="wholewrap">
+    <div class="f-header">侧轴子元素排版对齐(默认，align-items:stretch)</div>
+    <div class="f-header">如果项目未设置高度或设置为auto,将占满整个容器高度</div>
+    <div class="f-body align-items-stretch ">
+        <div style="height: 100px">1</div>
+        <div style="height: 120px">2</div>
+        <div style="height: 140px">3</div>
+        <div style="height: 160px">4</div>
+        <div style="height: 180px">5</div>
+    </div>
+</div>
+
+<div class="wholewrap">
+    <div class="f-header">设置弹性盒子侧轴子元素排版对齐(默认，侧轴起点对齐：align-items: flex-start)</div>
+    <div class="f-body align-items-flex-start">
+        <div style="height: 100px">1</div>
+        <div style="height: 120px">2</div>
+        <div style="height: 140px">3</div>
+        <div style="height: 160px">4</div>
+        <div style="height: 180px">5</div>
+    </div>
+</div>
+
+<div class="wholewrap">
+    <div class="f-header">主轴子元素排版对齐(侧轴终点对齐：align-items: flex-end)</div>
+    <div class="f-body align-items-flex-end">
+        <div style="height: 100px">1</div>
+        <div style="height: 120px">2</div>
+        <div style="height: 140px">3</div>
+        <div style="height: 160px">4</div>
+        <div style="height: 180px">5</div>
+    </div>
+</div>
+
+<div class="wholewrap">
+    <div class="f-header">侧轴子元素排版对齐(侧轴中点对齐：align-items: center)</div>
+    <div class="f-body align-items-center">
+        <div style="height: 100px">1</div>
+        <div style="height: 120px">2</div>
+        <div style="height: 140px">3</div>
+        <div style="height: 160px">4</div>
+        <div style="height: 180px">5</div>
+    </div>
+</div>
+
+<div class="wholewrap">
+    <div class="f-header">项目的第一行文字基线对齐(align-items: baseline)</div>
+    <div class="f-body align-items-baseline">
+        <div style="height: 100px">1</div>
+        <div style="height: 120px">2</div>
+        <div style="height: 140px">3</div>
+        <div style="height: 160px">4</div>
+        <div style="height: 180px">5</div>
+    </div>
+</div>
+
+<!--设置侧轴子元素排版对齐方式 结束-->
+
+<!--设置多行子元素侧轴排列 开始-->
+<h3>5.设置弹性盒子（父元素）的多行子元素侧轴排列</h3>
+<hr>
+<div class="wholewrap">
+    <div class="f-header">设置多行子元素侧轴排序(align-content:flex-start)</div>
+    <div  style="height: 290px" class="f-body align-content-flex-start wrap ">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+        <div>13</div>
+        <div>14</div>
+        <div>15</div>
+    </div>
+</div>
+
+<div class="wholewrap">
+    <div class="f-header">设置多行子元素侧轴排序(align-content:flex-end)</div>
+    <div style="height: 290px" class="f-body align-content-flex-end wrap ">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+        <div>13</div>
+        <div>14</div>
+        <div>15</div>
+    </div>
+</div>
+
+<div class="wholewrap">
+    <div class="f-header">设置多行子元素侧轴排序(align-content:center)</div>
+    <div style="height: 290px" class="f-body align-content-center wrap ">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+        <div>13</div>
+        <div>14</div>
+        <div>15</div>
+    </div>
+</div>
+
+<div class="wholewrap">
+    <div class="f-header">设置多行子元素侧轴排序(align-content:space-between)</div>
+    <div  style="height: 290px"class="f-body align-content-space-between wrap ">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+        <div>13</div>
+        <div>14</div>
+        <div>15</div>
+    </div>
+</div>
+
+<div class="wholewrap">
+    <div class="f-header">设置多行子元素侧轴排序(align-content:space-around)</div>
+    <div style="height: 290px" class="f-body align-content-space-around wrap">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+        <div>13</div>
+        <div>14</div>
+        <div>15</div>
+    </div>
+</div>
+<!--设置多行子元素侧轴排列 结束-->
+
+
+
+<!--设置子元素排序方向 开始-->
+<h3>6.设置弹性盒子（父元素）的子元素排序</h3>
+<hr>
+<div class="wholewrap">
+    <div class="f-header row">设置弹性盒子（父元素）的子元素排序(所有子元素盒子默认：order=0)</div>
+    <div class="f-body">
+        <div style="order: 0">1</div>
+        <div style="order: 0">2</div>
+        <div style="order: 0">3</div>
+        <div style="order: 0">4</div>
+        <div style="order: 0">5</div>
+    </div>
+</div>
+
+<div class="wholewrap">
+    <div class="f-header">设置弹性盒子（父元素）的子元素排序(倒序)</div>
+    <div class="f-body">
+        <div style="order: 5">1</div>
+        <div style="order: 4">2</div>
+        <div style="order: 3">3</div>
+        <div style="order: 2">4</div>
+        <div style="order: 1">5</div>
+    </div>
+</div>
+
+<div class="wholewrap">
+    <div class="f-header">设置弹性盒子伸缩主轴的方向(指定任意序)</div>
+    <div class="f-body">
+        <div style="order: 5">1</div>
+        <div style="order: 2">2</div>
+        <div style="order: 3">3</div>
+        <div style="order: 4">4</div>
+        <div style="order: 1">5</div>
+    </div>
+</div>
+<!--设置子元素排序方向 end-->
+
+<!--设置子元素排序方向 开始-->
+<h3>7.设置弹性盒子（父元素）的子元素盒子的大小比例</h3>
+<hr>
+<div class="wholewrap">
+    <div class="f-header">设置弹性盒子（父元素）的子元素盒子的放大比例4：1：2</div>
+    <div class="f-body">
+        <div style="flex-grow: 4">1</div>
+        <div style="flex-grow: 1">2</div>
+        <div style="flex-grow: 2">3</div>
+    </div>
+</div>
+
+<div class="wholewrap">
+    <div class="f-header">设置弹性盒子（父元素）的子元素盒子的缩小比例4:3:2:1:...</div>
+    <div class="f-body">
+        <div style="flex-shrink: 4"></div>
+        <div style="flex-shrink: 3"></div>
+        <div style="flex-shrink: 2"></div>
+        <div style="flex-shrink: 1"></div>
+        <div style="flex-shrink: 1"></div>
+        <div style="flex-shrink: 1"></div>
+        <div style="flex-shrink: 1"></div>
+        <div style="flex-shrink: 1"></div>
+        <div style="flex-shrink: 1"></div>
+        <div style="flex-shrink: 1"></div>
+        <div style="flex-shrink: 1"></div>
+
+    </div>
+</div>
+<!--设置子元素排序方向 end-->
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+css 的display属性增加flex值，意为，让容器的显示模式为弹性盒子
+设置为flex布局后，意为弹性布局。
+弹性盒子它所有子元素的float，clear和vertical-align属性失效。
+
+弹性盒子分主轴（默认：水平方向）和侧轴（竖直方向）。
+侧轴永远垂直于主轴。
+我们可以修改主轴方向：
+flex-direction: 
+row (水平向右。默认值)
+row-reverse (和row相反)
+column（从上往下垂直排列子元素）
+column-reverse（和column方向相反）
+
+如果子元素太多，无法将所有子元素在一行内排列，则需要考虑换行
+flex-wrap：
+nowrap（不换行，默认）
+wrap：换行，第一行在上方
+wrap-reverse：换行，第一行在下方
+
+属性合写：
+flex-flow属性是flex-direction和flex-wrap属性的简写形式，默认 row nowrap；
+.box{
+flex-flow: <flex-direction> || <flex-wrap>;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>W3Cschool教程(w3cschool.cn)</title>
+<style>
+div
+{
+	width:100px;
+	height:100px;
+	background:red;
+	position:relative;
+	animation-name:myfirst;
+	animation-duration:3s;
+	animation-timing-function:linear;
+	animation-delay:1s;
+	animation-iteration-count:infinite;
+	animation-direction:alternate;
+	animation-play-state:running;
+	/* Safari and Chrome: */
+
+    	/*规定 @keyframes 动画的名称*/
+	-webkit-animation-name:myfirst;
+
+    /*规定动画完成一个周期所花费的秒或毫秒。默认是 0。*/
+	-webkit-animation-duration:3s;
+
+    /*规定动画的速度曲线。默认是 "ease"。*/
+	-webkit-animation-timing-function:linear;
+
+    	/*规定动画何时开始。默认是 0。此处为1秒后播放*/
+	-webkit-animation-delay:1s;
+
+    /*规定动画被播放的次数。默认是 1。此处为无限次*/
+	-webkit-animation-iteration-count:infinite;
+
+    /*规定动画是否在下一周期逆向地播放。默认是 "normal"。*/
+    /*如果要动画在下一轮逆向运动，属性值为alternate*/
+	-webkit-animation-direction:normal;
+
+    	/*规定动画是否正在运行或暂停。默认是 "running"*/
+	-webkit-animation-play-state:running;
+}
+
+/*规定动画， 0%为1次动画开始，100%为1次动画结束*/
+@keyframes myfirst
+{
+	0%   {background:red; left:0px; top:0px;}
+	25%  {background:yellow; left:200px; top:0px;}
+	50%  {background:blue; left:200px; top:200px;}
+	75%  {background:green; left:0px; top:200px;}
+	100% {background:red; left:0px; top:0px;}
+}
+
+@-webkit-keyframes myfirst /* Safari and Chrome */
+{
+	0%   {background:red; left:0px; top:0px;}
+	25%  {background:yellow; left:200px; top:0px;}
+	50%  {background:blue; left:200px; top:200px;}
+	75%  {background:green; left:0px; top:200px;}
+	100% {background:red; left:0px; top:0px;}
+}
+</style>
+</head>
+<body>
+
+<p><b>注意:</b> 该实例在 Internet Explorer 9 及更早 IE 版本是无效的。</p>
+
+<div></div>
+
+</body>
+</html>

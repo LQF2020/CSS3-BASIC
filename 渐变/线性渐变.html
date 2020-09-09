@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>线性渐变</title>
+    <style>
+        div{
+            display: inline-block;
+            margin-right: 10px;
+        }
+        .div1{
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            /*从右到左*/
+            background: linear-gradient(to left,red, blue); /* 标准的语法 */
+        }
+        .div2{
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            /*从左到右*/
+            background: linear-gradient(to right,red, blue); /* 标准的语法 */
+        }
+        .div3{
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            /*从下到上*/
+            background: linear-gradient(to top,red, blue); /* 标准的语法 */
+        }
+        .div4{
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            /*从上到下（默认）*/
+            background: linear-gradient(to bottom,red, blue); /* 标准的语法 */
+        }
+
+        .div5{
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            /*从左上到右下*/
+            background: linear-gradient(to bottom right,red, blue); /* 标准的语法 */
+        }
+    </style>
+</head>
+<body>
+<div class="div1"></div>
+<div class="div2"></div>
+<div class="div3"></div>
+<div class="div4"></div>
+<div class="div5"></div>
+</body>
+</html>

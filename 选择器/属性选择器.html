@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>属性选择器</title>
+    <style>
+        /*选择所有带有id属性的元素*/
+        div[id] {
+            background-color:yellow;
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+            display: inline-block;
+            margin-right: 10px;
+        }
+        /*[attribute = value] 选择器选择具有指定属性和值的元素*/
+        div[target="2"]{
+            border-radius: 30px;
+        }
+
+        /*[attribute^=value] 选择器匹配元素属性值带指定的值开始的元素*/
+        div[target^="1"]{
+            border-radius: 10px;
+            background-color: antiquewhite;
+        }
+
+        /*[attribute$=value] 选择器匹配元素属性值带指定的值结尾的元素。*/
+         div[target$="4"]{
+             width: 300px;
+        }
+
+        /*[attribute*=value] 选择器匹配元素属性值包含指定值的元素*/
+         div[class*="circle"]{
+             border-radius: 40px;
+        }
+
+    </style>
+</head>
+<body>
+<div target="123" id="div1" class="triangle"></div>
+<div id='div2' class="square"></div>
+<div target="2" id="div3" class="square"></div>
+<div target="target4" id="div4" class="circle square"></div>
+<div id="div5"></div>
+
+</body>
+</html>

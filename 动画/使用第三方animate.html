@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>使用第三方animate.css</title>
+    <link rel="stylesheet" href="./animate.css">
+<style>
+div {
+    width: 100px;
+    height: 100px;
+    background-color: #e5eecc;
+}
+</style>
+    <script>
+        window.onload = function(){
+            var oDiv = document.getElementById('div1');
+            oDiv.onmouseover = function(){
+                oDiv.classList.add("animated", "bounce","infinite");
+            }
+            oDiv.onmouseout = function () {
+                oDiv.classList.remove("animated", "bounce", "infinite");
+            }
+        }
+    </script>
+</head>
+<body>
+
+<p><b>注意:</b> 该实例在 Internet Explorer 9 及更早 IE 版本是无效的。</p>
+
+<div id='div1'>touch me!</div>
+
+</body>
+</html>
